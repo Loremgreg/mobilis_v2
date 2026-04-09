@@ -330,16 +330,19 @@ h4 { font-size: 15px; font-weight: 600; }
 .hero-stats-col {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  padding-bottom: 60px;
-  padding-top: 60px;
+  justify-content: flex-start;
+  gap: 16px;
+  padding-top: 20px;
   padding-left: 16px;
+  align-self: start;
 }
 
 .hero-stat-card {
-  background: var(--white);
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 20px;
   padding: 24px 28px 20px;
   min-width: 200px;
 }
