@@ -22,7 +22,7 @@
   --shadow-color: rgba(5, 39, 35, 0.12);
   --radius:       12px;
   --radius-sm:    8px;
-  --max-width:    1200px;
+  --max-width:    1340px;
   --nav-h:        72px;
 }
 
@@ -202,25 +202,28 @@ h4 { font-size: 15px; font-weight: 600; }
 
 /* ===== HERO ===== */
 .hero {
-  /* Full-viewport light mint — matches reference hero background */
-  background: var(--light-mint); /* #98E5D4 */
-  padding-top: calc(var(--nav-h) + 0px);
-  padding-bottom: 0;
+  /* White page background with a boxed mint hero panel */
+  background: var(--white);
+  padding-top: calc(var(--nav-h) + 24px);
+  padding-bottom: 24px;
   overflow: hidden;
   position: relative;
 }
 
-/* Inner boxed container — creates the visible left/right breathing room */
+/* Inner boxed container — aligns with nav content edges */
 .hero-inner {
+  background: var(--light-mint);
+  border-radius: 28px;
+  overflow: hidden;
   display: grid;
   grid-template-columns: 40% 1fr 240px;
   gap: 0;
   align-items: flex-end;
   min-height: 580px;
-  /* boxed content: narrower max-width so teal shows on sides */
-  max-width: 1100px;
+  width: 100%;
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 32px;
 }
 
 /* --- Col 1: text --- */
@@ -334,6 +337,7 @@ h4 { font-size: 15px; font-weight: 600; }
   gap: 16px;
   padding-top: 20px;
   padding-left: 16px;
+  padding-right: 24px;
   align-self: start;
 }
 
@@ -949,8 +953,16 @@ h4 { font-size: 15px; font-weight: 600; }
   .nav-toggle { display: flex; }
   .navbar { position: fixed; background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); box-shadow: 0 2px 16px rgba(5,39,35,0.08); }
 
-  .hero { padding-top: calc(var(--nav-h) + 32px); }
-  .hero-inner { grid-template-columns: 1fr; gap: 32px; min-height: unset; }
+  .hero { padding-top: calc(var(--nav-h) + 32px); padding-bottom: 16px; }
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    min-height: unset;
+    width: calc(100% - 16px);
+    max-width: none;
+    border-radius: 20px;
+    padding: 0 20px;
+  }
   .hero-photo-col { order: -1; justify-content: flex-start; }
   .hero-photo { max-width: 280px; }
   .hero-stats-col { flex-direction: row; padding-left: 0; padding-bottom: 32px; }
