@@ -57,25 +57,33 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 14px 28px;
-  border-radius: 100px;
+  padding: 12px 24px;
+  border-radius: 8px;
   font-family: 'Poppins', sans-serif;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   line-height: 1;
-  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  border: none;
+  transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out,
+              transform 0.15s ease-in-out, box-shadow 0.2s ease-in-out;
   white-space: nowrap;
+  cursor: pointer;
 }
 .btn:hover { transform: translateY(-2px); }
 .btn:active { transform: translateY(0); }
 
 .btn-primary {
-  background: var(--accent);
+  background: var(--accent);       /* #39BDA6 */
   color: var(--white);
-  box-shadow: 0 4px 20px rgba(57, 189, 166, 0.35);
+  box-shadow: 0 2px 8px rgba(57, 189, 166, 0.30);
 }
-.btn-primary:hover { background-color: #2aa896; box-shadow: 0 6px 28px rgba(57, 189, 166, 0.45); }
+.btn-primary:hover {
+  background-color: #33a895;
+  box-shadow: 0 4px 16px rgba(57, 189, 166, 0.40);
+}
 .btn-primary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.btn-primary:active { opacity: 0.92; }
 
 .btn-ghost {
   background: transparent;
@@ -88,9 +96,9 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
 .btn-white {
   background: var(--white);
   color: var(--primary);
-  box-shadow: 0 4px 20px rgba(5, 39, 35, 0.15);
+  box-shadow: 0 2px 8px rgba(5, 39, 35, 0.12);
 }
-.btn-white:hover { background: var(--pale-mint); }
+.btn-white:hover { background-color: var(--pale-mint); }
 .btn-white:focus-visible { outline: 2px solid var(--white); outline-offset: 3px; }
 
 .btn-full { width: 100%; }
@@ -254,28 +262,35 @@ h4 { font-size: 15px; font-weight: 600; }
   max-width: 380px;
 }
 
-/* Hero CTA button — dark green, wide, rounded */
+/* Hero CTA button */
 .btn-hero-cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--primary);
+  background: var(--accent);        /* #39BDA6 */
   color: var(--white);
   font-family: 'Poppins', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
-  padding: 18px 32px;
+  letter-spacing: -0.01em;
+  padding: 12px 24px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
   text-align: center;
-  line-height: 1.3;
-  max-width: 340px;
+  line-height: 1.4;
+  max-width: 360px;
   margin-bottom: 28px;
-  transition: background-color 0.2s ease, transform 0.15s ease;
+  box-shadow: 0 2px 8px rgba(57, 189, 166, 0.30);
+  transition: background-color 0.2s ease-in-out, transform 0.15s ease-in-out,
+              box-shadow 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
-.btn-hero-cta:hover { background: #0a3d35; transform: translateY(-2px); }
-.btn-hero-cta:active { transform: translateY(0); }
+.btn-hero-cta:hover {
+  background-color: #33a895;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(57, 189, 166, 0.40);
+}
+.btn-hero-cta:active { transform: translateY(0); opacity: 0.92; }
 .btn-hero-cta:focus-visible { outline: 2px solid var(--white); outline-offset: 3px; }
 
 /* Avatars */
@@ -299,14 +314,15 @@ h4 { font-size: 15px; font-weight: 600; }
   align-items: flex-end;
   justify-content: center;
   align-self: stretch;
+  overflow: hidden;
 }
 .hero-photo {
   display: block;
-  width: 100%;
-  max-width: 420px;
-  height: 580px;
+  width: 320px;
+  height: 480px;
   object-fit: cover;
   object-position: top center;
+  flex-shrink: 0;
 }
 
 /* --- Col 3: stat cards --- */
