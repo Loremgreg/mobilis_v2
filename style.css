@@ -591,6 +591,7 @@ h4 { font-size: 15px; font-weight: 600; }
 }
 .price-duration {
   font-size: 14px;
+  font-weight: 700;
   color: var(--text-light);
   margin-bottom: 28px;
   padding-bottom: 28px;
@@ -909,9 +910,12 @@ h4 { font-size: 15px; font-weight: 600; }
   .hero-inner { gap: 40px; }
   .how-inner { gap: 40px; }
   .why-inner { gap: 40px; }
+  .pricing-inner { gap: 48px; }
   .footer-inner { grid-template-columns: 1fr 1fr; gap: 40px; }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps-grid { grid-template-columns: repeat(2, 1fr); }
+  .step-card:not(:last-child)::after { display: none; }
 }
 
 @media (max-width: 768px) {
@@ -961,6 +965,11 @@ h4 { font-size: 15px; font-weight: 600; }
   .reviews-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
 
+  .pricing-inner { grid-template-columns: 1fr; gap: 40px; }
+  .pricing-card { max-width: 480px; }
+
+  .coverage-map img { height: 220px; object-fit: cover; }
+
   .cta-band-inner { flex-direction: column; text-align: center; }
 
   .footer-inner { grid-template-columns: 1fr; gap: 32px; }
@@ -973,4 +982,8 @@ h4 { font-size: 15px; font-weight: 600; }
   .team-grid { grid-template-columns: 1fr; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; justify-content: center; }
+  .pricing-card { padding: 28px 20px; }
+  .price-amount { font-size: 44px; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
 }
