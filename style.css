@@ -424,11 +424,18 @@ h4 { font-size: 15px; font-weight: 600; }
 
 /* ===== COVERAGE ===== */
 .coverage-section {
-  padding: 80px 0;
-  background: var(--pale-mint);
+  padding: 60px 0;
+  background: var(--white);
   text-align: center;
 }
-.coverage-inner { display: flex; flex-direction: column; align-items: center; }
+.coverage-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--pale-mint);
+  border-radius: 28px;
+  padding: 64px 40px;
+}
 .coverage-section h2 { color: var(--primary); margin-bottom: 16px; }
 .coverage-sub {
   color: var(--text);
@@ -449,7 +456,7 @@ h4 { font-size: 15px; font-weight: 600; }
 /* ===== SERVICES ===== */
 .services-section {
   padding: 100px 0;
-  background: var(--faint);
+  background: var(--white);
 }
 .services-grid {
   display: grid;
@@ -458,6 +465,7 @@ h4 { font-size: 15px; font-weight: 600; }
 }
 .service-card {
   background: var(--white);
+  border: 1px solid rgba(5, 39, 35, 0.08);
   border-radius: var(--radius);
   padding: 32px 28px;
   box-shadow: 0 2px 16px rgba(5, 39, 35, 0.06);
@@ -484,7 +492,7 @@ h4 { font-size: 15px; font-weight: 600; }
 /* ===== CTA BAND ===== */
 .cta-band {
   padding: 60px 0;
-  background: var(--accent);
+  background: var(--white);
 }
 .cta-band-inner {
   display: flex;
@@ -492,6 +500,9 @@ h4 { font-size: 15px; font-weight: 600; }
   justify-content: space-between;
   gap: 32px;
   flex-wrap: wrap;
+  background: var(--accent);
+  border-radius: 28px;
+  padding: 32px 40px;
 }
 .cta-band-text h2 {
   color: var(--white);
@@ -557,13 +568,16 @@ h4 { font-size: 15px; font-weight: 600; }
 /* ===== PRICING ===== */
 .pricing-section {
   padding: 100px 0;
-  background: var(--pale-mint);
+  background: var(--white);
 }
 .pricing-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
+  background: var(--pale-mint);
+  border-radius: 28px;
+  padding: 64px 40px;
 }
 .pricing-text h2 {
   margin: 8px 0 20px;
@@ -969,6 +983,9 @@ h4 { font-size: 15px; font-weight: 600; }
   .hero-stat-card { min-width: unset; flex: 1; }
   .stat-number { font-size: 36px; }
   .hero-content { padding-right: 0; padding-bottom: 0; }
+  .coverage-inner { padding: 40px 20px; border-radius: 20px; }
+  .cta-band-inner { padding: 24px 20px; border-radius: 20px; }
+  .pricing-inner { padding: 40px 20px; border-radius: 20px; }
 
   .how-inner { grid-template-columns: 1fr; }
   .how-visual { order: -1; }
