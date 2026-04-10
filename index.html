@@ -363,85 +363,133 @@
 
   <!-- ===== TEAM ===== -->
   <section class="team-section" id="team">
-    <div class="container">
-      <div class="section-header">
+    <div class="container team-inner">
+      <div class="team-text">
         <p class="section-label">Wer wir sind</p>
-        <h2>Lernen Sie unser Team kennen</h2>
-        <p class="team-sub">Unsere zertifizierten Physiotherapeuten kommen zu Ihnen – engagiert, einfühlsam und
-          professionell.</p>
+        <h2>Lernen Sie unser<br>Team kennen</h2>
+        <p class="team-desc">Unser Team besteht aus hochqualifizierten und engagierten Physiotherapeuten, die Ihnen eine
+          individuell abgestimmte Behandlung auf höchstem Niveau bieten.</p>
+        <a href="#contact" class="btn btn-primary">Termin buchen</a>
       </div>
-      <div class="team-grid">
-        <div class="team-card">
-          <img src="https://placehold.co/280x320/98E5D4/052723?text=Therapeutin"
-            alt="Mobilis Physio Therapeutin Lisa Müller">
-          <div class="team-info">
+      <div class="team-carousel-wrap">
+        <button class="carousel-arrow carousel-prev" aria-label="Vorheriger">&#8249;</button>
+        <div class="team-carousel" id="teamCarousel">
+          <div class="team-slide">
+            <img src="https://placehold.co/220x260/98E5D4/052723?text=T1" alt="Lisa Müller – Physiotherapeutin">
             <strong>Lisa Müller</strong>
             <span>Physiotherapeutin, Manuelle Therapie</span>
           </div>
-        </div>
-        <div class="team-card">
-          <img src="https://placehold.co/280x320/39BDA6/052723?text=Therapeut"
-            alt="Mobilis Physio Therapeut Jonas Weber">
-          <div class="team-info">
+          <div class="team-slide">
+            <img src="https://placehold.co/220x260/39BDA6/052723?text=T2" alt="Jonas Weber – Sportphysiotherapeut">
             <strong>Jonas Weber</strong>
             <span>Sportphysiotherapeut, Lymphdrainage</span>
           </div>
-        </div>
-        <div class="team-card">
-          <img src="https://placehold.co/280x320/98E5D4/052723?text=Therapeutin"
-            alt="Mobilis Physio Therapeutin Anna Schmidt">
-          <div class="team-info">
+          <div class="team-slide">
+            <img src="https://placehold.co/220x260/98E5D4/052723?text=T3" alt="Anna Schmidt – Physiotherapeutin">
             <strong>Anna Schmidt</strong>
             <span>Geriatrische Reha, Krankengymnastik</span>
           </div>
-        </div>
-        <div class="team-card">
-          <img src="https://placehold.co/280x320/39BDA6/052723?text=Therapeut"
-            alt="Mobilis Physio Therapeut Tobias Braun">
-          <div class="team-info">
+          <div class="team-slide">
+            <img src="https://placehold.co/220x260/39BDA6/052723?text=T4" alt="Tobias Braun – Physiotherapeut">
             <strong>Tobias Braun</strong>
             <span>Elektrotherapie, Manuelle Therapie</span>
           </div>
         </div>
+        <button class="carousel-arrow carousel-next" aria-label="Nächster">&#8250;</button>
+        <div class="carousel-dots" id="carouselDots"></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== REVIEWS ===== -->
-  <section class="reviews-section">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">Bewertungen</p>
-        <h2>Das sagen unsere Patienten</h2>
+  <!-- ===== FAQ ===== -->
+  <section class="faq-section">
+    <div class="container faq-inner">
+      <div class="faq-header">
+        <p class="section-label">FAQ</p>
+        <h2>Häufig gestellte Fragen</h2>
       </div>
-      <div class="reviews-grid">
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p>"Absolut professionell und sehr einfühlsam. Die Behandlung zu Hause ist eine echte Erleichterung. Ich kann
-            Mobilis Physio nur empfehlen!"</p>
-          <div class="reviewer">
-            <img src="https://placehold.co/44x44/E8FFF4/052723?text=M" alt="Bewertung von Maria K.">
-            <div><strong>Maria K.</strong><span>München</span></div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Was ist mobile Physiotherapie und für wen ist sie geeignet?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Mobile Physiotherapie bedeutet: Der Therapeut kommt zu Ihnen — mit allem notwendigen Equipment. Sie erhalten dieselbe klinische Qualität wie in einer Praxis, in Ihrer gewohnten Umgebung. Unser Angebot richtet sich an Privatpatienten und Selbstzahler, die Wert auf individuelle, hochwertige Betreuung legen.</p>
           </div>
         </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p>"Mein Rücken hat sich nach nur wenigen Sitzungen deutlich verbessert. Der Therapeut war pünktlich,
-            freundlich und sehr kompetent."</p>
-          <div class="reviewer">
-            <img src="https://placehold.co/44x44/E8FFF4/052723?text=T" alt="Bewertung von Thomas R.">
-            <div><strong>Thomas R.</strong><span>Berlin</span></div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Wie lange dauert eine Sitzung?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Jede Sitzung dauert 60 Minuten — ohne Ausnahme. Keine geteilte Aufmerksamkeit, kein Zeitdruck.</p>
           </div>
         </div>
-        <div class="review-card">
-          <div class="review-stars">★★★★★</div>
-          <p>"Besonders nach meiner Knie-OP war die mobile Physiotherapie ein Segen. Kein Stress mit dem Fahren –
-            einfach nur erholen und gesunden."</p>
-          <div class="reviewer">
-            <img src="https://placehold.co/44x44/E8FFF4/052723?text=S" alt="Bewertung von Sabine W.">
-            <div><strong>Sabine W.</strong><span>Hamburg</span></div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Was kostet ein Hausbesuch — und was ist inklusive?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Eine Sitzung kostet 125 €. Darin enthalten: Anfahrt, komplettes Therapieequipment und ein individueller Behandlungsplan. Keine versteckten Kosten.</p>
           </div>
         </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Übernimmt meine private Krankenversicherung die Kosten?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Viele private Krankenversicherungen erstatten physiotherapeutische Hausbesuche — je nach Tarif vollständig oder teilweise. Wir stellen Ihnen eine ordentliche Rechnung, die Sie direkt bei Ihrer Versicherung einreichen können. Wir empfehlen, dies vorab mit Ihrer PKV zu klären.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Benötige ich ein ärztliches Rezept?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Nein. Ein Hausbesuch ist auch ohne ärztliche Verordnung möglich.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Was muss ich für den Hausbesuch vorbereiten?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Stellen Sie sicher, dass Sie zum vereinbarten Termin zu Hause sind und 60 Minuten Zeit haben. Tragen Sie bequeme, sportliche Kleidung. Falls vorhanden: ärztliche Unterlagen oder Befunde bereithalten. Alles andere bringen wir mit.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            In welchen Regionen sind Sie tätig?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Wir sind im Raum München und Umgebung tätig — darunter Weilheim, Murnau am Staffelsee, Garmisch-Partenkirchen, Tutzing und Starnberg. Kontaktieren Sie uns mit Ihrer Postleitzahl — wir antworten innerhalb von 24 Stunden.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Wie kann ich einen Termin vereinbaren?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Senden Sie uns einfach eine Anfrage über unser Kontaktformular oder per E-Mail an <a href="mailto:info@mobilis-physio.de">info@mobilis-physio.de</a>. Wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -566,6 +614,63 @@
         if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
       });
     });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        // Close all
+        document.querySelectorAll('.faq-question').forEach(b => {
+          b.setAttribute('aria-expanded', 'false');
+          b.nextElementSibling.classList.remove('open');
+        });
+        // Open clicked if it was closed
+        if (!isOpen) {
+          btn.setAttribute('aria-expanded', 'true');
+          btn.nextElementSibling.classList.add('open');
+        }
+      });
+    });
+
+    // Team carousel
+    (function () {
+      const slides = Array.from(document.querySelectorAll('#teamCarousel .team-slide'));
+      const dotsWrap = document.getElementById('carouselDots');
+      let current = 0;
+      let timer;
+
+      // Build dots
+      slides.forEach((_, i) => {
+        const d = document.createElement('button');
+        d.setAttribute('aria-label', 'Therapeut ' + (i + 1));
+        d.addEventListener('click', () => { goTo(i); resetTimer(); });
+        dotsWrap.appendChild(d);
+      });
+
+      function goTo(index) {
+        current = (index + slides.length) % slides.length;
+        const prev = (current - 1 + slides.length) % slides.length;
+        const next = (current + 1) % slides.length;
+        slides.forEach((s, i) => {
+          s.className = 'team-slide';
+          if (i === current) s.classList.add('active');
+          else if (i === prev) s.classList.add('prev');
+          else if (i === next) s.classList.add('next');
+        });
+        dotsWrap.querySelectorAll('button').forEach((d, i) => d.classList.toggle('active', i === current));
+      }
+
+      function resetTimer() {
+        clearInterval(timer);
+        timer = setInterval(() => goTo(current + 1), 2000);
+      }
+
+      document.querySelector('.carousel-prev').addEventListener('click', () => { goTo(current - 1); resetTimer(); });
+      document.querySelector('.carousel-next').addEventListener('click', () => { goTo(current + 1); resetTimer(); });
+
+      goTo(0);
+      resetTimer();
+    })();
   </script>
 </body>
 
