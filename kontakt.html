@@ -141,9 +141,15 @@
 
     /* ===== WHY SECTION ===== */
     .why-section {
-      background: #98E5D4;
+      background: var(--white);
       padding: 80px 0;
       text-align: center;
+    }
+
+    .why-section .container {
+      background: #98E5D4;
+      border-radius: 28px;
+      padding: 64px 40px;
     }
 
     .why-section .section-label {
@@ -216,6 +222,11 @@
 
       .why-grid {
         grid-template-columns: 1fr;
+      }
+
+      .why-section .container {
+        padding: 40px 20px;
+        border-radius: 20px;
       }
     }
   </style>
