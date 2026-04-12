@@ -347,33 +347,53 @@
         <div class="contact-form-card">
           <h3>Kostenlose Anfrage</h3>
           <p class="form-sub">Wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>
-          <form class="contact-form" onsubmit="return false;">
+          <form class="contact-form" id="contactForm" novalidate>
             <div class="form-row">
               <div class="form-group">
                 <label for="vorname">Vorname</label>
-                <input type="text" id="vorname" name="vorname" placeholder="Max">
+                <input type="text" id="vorname" name="vorname">
               </div>
               <div class="form-group">
                 <label for="nachname">Nachname</label>
-                <input type="text" id="nachname" name="nachname" placeholder="Mustermann">
+                <input type="text" id="nachname" name="nachname">
               </div>
             </div>
             <div class="form-group">
-              <label for="email">E-Mail</label>
-              <input type="email" id="email" name="email" placeholder="max@beispiel.de">
+              <label for="email">E-Mail <span class="required-mark">*</span></label>
+              <input type="email" id="email" name="email" required placeholder="max@beispiel.de">
             </div>
             <div class="form-group">
-              <label for="telefon">Telefon</label>
-              <input type="tel" id="telefon" name="telefon" placeholder="+49 ...">
+              <label for="telefon">Telefon <span class="required-mark">*</span></label>
+              <input type="tel" id="telefon" name="telefon" required placeholder="+49 ...">
             </div>
             <div class="form-group">
-              <label for="plz">Postleitzahl</label>
-              <input type="text" id="plz" name="plz" placeholder="10115">
+              <label for="strasse">Straße <span class="required-mark">*</span></label>
+              <input type="text" id="strasse" name="strasse" required placeholder="Musterstraße 12">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="plz">PLZ <span class="required-mark">*</span></label>
+                <input type="text" id="plz" name="plz" required placeholder="10115">
+              </div>
+              <div class="form-group">
+                <label for="ort">Ort <span class="required-mark">*</span></label>
+                <input type="text" id="ort" name="ort" required placeholder="Berlin">
+              </div>
             </div>
             <div class="form-group">
-              <label for="nachricht">Ihre Nachricht (optional)</label>
-              <textarea id="nachricht" name="nachricht" rows="3"
-                placeholder="Beschreiben Sie kurz Ihr Anliegen..."></textarea>
+              <label for="diagnose">Diagnose / Grund der Behandlung <span class="required-mark">*</span></label>
+              <input type="text" id="diagnose" name="diagnose" required placeholder="z.B. Rückenschmerzen, nach Knie-OP …">
+            </div>
+            <div class="form-group">
+              <label for="anmerkungen">Anmerkungen (optional)</label>
+              <textarea id="anmerkungen" name="anmerkungen" rows="3"
+                placeholder="Weitere Informationen, Terminwünsche …"></textarea>
+            </div>
+            <div class="form-group">
+              <label class="captcha-label">Sicherheitsabfrage <span class="required-mark">*</span></label>
+              <span id="captchaQuestion" class="captcha-question"></span>
+              <input type="text" id="captchaAnswer" name="captchaAnswer" required placeholder="Ihre Antwort" autocomplete="off">
+              <span class="captcha-error" id="captchaError">Falsche Antwort. Bitte erneut versuchen.</span>
             </div>
             <button type="submit" class="btn btn-primary btn-full">Anfrage absenden</button>
           </form>
@@ -676,6 +696,65 @@
         if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
       });
     });
+
+    // Contact form — required fields + math captcha
+    (function () {
+      const questions = [
+        { q: '2 + 3 =', a: 5 }, { q: '4 + 1 =', a: 5 }, { q: '7 - 3 =', a: 4 },
+        { q: '3 × 2 =', a: 6 }, { q: '9 - 4 =', a: 5 }, { q: '6 + 2 =', a: 8 },
+        { q: '5 - 2 =', a: 3 }, { q: '4 × 2 =', a: 8 }, { q: '10 - 6 =', a: 4 },
+        { q: '3 + 6 =', a: 9 }
+      ];
+      let current = questions[Math.floor(Math.random() * questions.length)];
+      const qEl = document.getElementById('captchaQuestion');
+      const aEl = document.getElementById('captchaAnswer');
+      const errEl = document.getElementById('captchaError');
+
+      function loadQuestion() {
+        current = questions[Math.floor(Math.random() * questions.length)];
+        qEl.textContent = current.q;
+        aEl.value = '';
+        errEl.style.display = 'none';
+      }
+      loadQuestion();
+
+      const form = document.getElementById('contactForm');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Validate required fields
+        let valid = true;
+        form.querySelectorAll('[required]').forEach(field => {
+          if (!field.value.trim()) {
+            field.classList.add('input-error');
+            valid = false;
+          } else {
+            field.classList.remove('input-error');
+          }
+        });
+
+        // Validate captcha
+        if (parseInt(aEl.value.trim()) !== current.a) {
+          aEl.classList.add('input-error');
+          errEl.style.display = 'block';
+          valid = false;
+          loadQuestion();
+        } else {
+          aEl.classList.remove('input-error');
+          errEl.style.display = 'none';
+        }
+
+        if (!valid) return;
+
+        // Success placeholder
+        form.innerHTML = '<p class="form-success">Vielen Dank! Wir melden uns innerhalb von 24 Stunden bei Ihnen.</p>';
+      });
+
+      // Clear error on input
+      form.querySelectorAll('input, textarea').forEach(field => {
+        field.addEventListener('input', () => field.classList.remove('input-error'));
+      });
+    })();
 
     // FAQ accordion
     document.querySelectorAll('.faq-question').forEach(btn => {
