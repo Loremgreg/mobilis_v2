@@ -1359,7 +1359,7 @@ h4 { font-size: 15px; font-weight: 600; }
     border-radius: 20px;
     padding: 0 20px;
   }
-  .hero-photo-col { order: -1; justify-content: flex-start; }
+  .hero-photo-col { order: 1; justify-content: flex-start; }
   .hero-photo { max-width: 280px; }
   .hero-stats-col { flex-direction: row; padding-left: 0; padding-bottom: 32px; }
   .hero-stat-card { min-width: unset; flex: 1; }
