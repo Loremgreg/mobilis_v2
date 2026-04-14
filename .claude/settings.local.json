@@ -3,7 +3,8 @@
     "allow": [
       "Bash(npx serve:*)",
       "Bash(node:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "WebFetch(domain:www.physiostich.de)"
     ]
   }
 }
