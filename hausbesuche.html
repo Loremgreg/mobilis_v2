@@ -88,6 +88,21 @@
       font-size: 16px;
     }
 
+    .hb-hero-img {
+      margin-top: 40px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 16px 50px rgba(5, 39, 35, 0.12);
+    }
+
+    .hb-hero-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 420px;
+      object-fit: cover;
+    }
+
     /* Trust Indicators */
     .hb-trust {
       background: var(--primary);
@@ -352,6 +367,80 @@
       margin: 0 auto;
     }
 
+    /* Image break band */
+    .hb-image-band {
+      position: relative;
+      overflow: hidden;
+      max-height: 400px;
+    }
+
+    .hb-image-band img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hb-image-band-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(5, 39, 35, 0.45), transparent 50%, rgba(5, 39, 35, 0.15));
+    }
+
+    /* Pre-CTA image section */
+    .hb-precta {
+      padding: 80px 0;
+      background: var(--bg-light);
+    }
+
+    .hb-precta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .hb-precta-img img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 16px 50px rgba(5, 39, 35, 0.12);
+      display: block;
+    }
+
+    .hb-precta-text .section-label {
+      color: var(--accent);
+    }
+
+    .hb-precta-text h2 {
+      font-size: clamp(24px, 3vw, 36px);
+      color: var(--primary);
+      margin: 12px 0 24px;
+      line-height: 1.25;
+    }
+
+    .hb-precta-text p {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .hb-precta-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hb-precta-img {
+        order: -1;
+      }
+
+      .hb-image-band, .hb-image-band img {
+        max-height: 260px;
+        height: 260px;
+      }
+    }
+
     /* CTA final section */
     .hb-cta-final {
       background: var(--white);
@@ -462,6 +551,9 @@
       <div class="hb-hero-label">Mobile Physiotherapie – Hausbesuche in Oberbayern</div>
       <p class="hb-hero-sub">Professionelle Physiotherapie direkt bei Ihnen zu Hause. Unsere staatlich anerkannten Therapeuten kommen zu Ihnen — 60 Minuten, 125 €, alles inklusive.</p>
       <a href="kontakt.html" class="btn btn-primary">Termin anfragen</a>
+      <div class="hb-hero-img">
+        <img src="assets/img_hausbesuch/physiotherapie-uebungen-zuhause.jpg" alt="Seniorin macht Armübungen mit Physiotherapeutin bei einem Hausbesuch in Oberbayern" width="800" height="420" loading="eager">
+      </div>
     </div>
   </section>
 
@@ -523,7 +615,7 @@
           <p>Unsere Therapeuten bringen alle notwendigen Materialien und Hilfsmittel mit und passen die Behandlung an Ihre häuslichen Gegebenheiten an. So wird Ihr Wohnzimmer, Schlafzimmer oder ein anderer geeigneter Raum zur privaten Behandlungsumgebung.</p>
         </div>
         <div class="hb-wasist-img">
-          <img src="assets/illustrations/Hausbesuche-Physiotherapie.webp" alt="Physiotherapeut beim Hausbesuch – mobile Physiotherapie in Oberbayern" loading="lazy">
+          <img src="assets/img_hausbesuch/physiotherapeut-behandlung-hausbesuch.webp" alt="Physiotherapeut behandelt Patienten auf mobiler Behandlungsliege zu Hause" width="460" height="613" loading="lazy">
         </div>
       </div>
     </div>
@@ -597,6 +689,12 @@
       </div>
     </div>
   </section>
+
+  <!-- ===== IMAGE BAND ===== -->
+  <div class="hb-image-band">
+    <img src="assets/img_hausbesuch/mobile-physiotherapie-rehabilitation.webp" alt="Patient trainiert mit Widerstandsband unter Anleitung einer Physiotherapeutin im Wohnzimmer" width="1200" height="400" loading="lazy">
+    <div class="hb-image-band-overlay"></div>
+  </div>
 
   <!-- ===== LEISTUNGEN ===== -->
   <section class="services-section" id="leistungen">
@@ -813,6 +911,23 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRE-CTA IMAGE ===== -->
+  <section class="hb-precta">
+    <div class="container">
+      <div class="hb-precta-grid">
+        <div class="hb-precta-img">
+          <img src="assets/img_hausbesuch/gehtraining-physiotherapie-zuhause.webp" alt="Älterer Patient übt Gehen mit Krücken und Unterstützung einer Physiotherapeutin in der Küche" width="768" height="512" loading="lazy">
+        </div>
+        <div class="hb-precta-text">
+          <p class="section-label">Persönliche Betreuung</p>
+          <h2>Ihre Therapie — in Ihren eigenen vier Wänden</h2>
+          <p>Unsere Therapeuten passen jede Behandlung an Ihre häusliche Umgebung und Ihre individuellen Bedürfnisse an. Ob Gehtraining in der Küche, Übungen im Wohnzimmer oder Mobilisation am Bett — wir kommen zu Ihnen, wo Sie sich am wohlsten fühlen.</p>
+          <a href="kontakt.html" class="btn btn-primary">Termin vereinbaren</a>
+        </div>
       </div>
     </div>
   </section>

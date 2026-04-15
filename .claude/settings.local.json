@@ -4,7 +4,8 @@
       "Bash(npx serve:*)",
       "Bash(node:*)",
       "Bash(curl:*)",
-      "WebFetch(domain:www.physiostich.de)"
+      "WebFetch(domain:www.physiostich.de)",
+      "Bash(pkill -f \"serve . -l 300\")"
     ]
   }
 }
