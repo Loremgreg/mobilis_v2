@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Physiotherapie – Hausbesuche in Oberbayern | Mobilis Physio</title>
+  <meta name="description" content="Professionelle Physiotherapie als Hausbesuch in Oberbayern ✓ 60 Min. ✓ 125 € all-inclusive ✓ Staatlich anerkannte Therapeuten ✓ Jetzt Termin vereinbaren!">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.mobilis-physio.de/hausbesuche">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Mobilis Physio – Mobile Physiotherapie Hausbesuche",
+    "description": "Professionelle mobile Physiotherapie als Hausbesuch in Oberbayern. Für Privatpatienten und Selbstzahler.",
+    "url": "https://www.mobilis-physio.de/hausbesuche",
+    "telephone": "+49-XXX-XXXXXXX",
+    "email": "info@mobilis-physio.de",
+    "areaServed": [
+      {"@type": "City", "name": "Garmisch-Partenkirchen"},
+      {"@type": "City", "name": "München"},
+      {"@type": "City", "name": "Murnau am Staffelsee"},
+      {"@type": "City", "name": "Starnberg"},
+      {"@type": "City", "name": "Tutzing"},
+      {"@type": "City", "name": "Weilheim"}
+    ],
+    "priceRange": "125 € pro Sitzung",
+    "openingHours": "Mo-Fr 09:00-19:00",
+    "medicalSpecialty": "Physiotherapy"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Was kostet Physiotherapie als Hausbesuch?", "acceptedAnswer": {"@type": "Answer", "text": "Eine Sitzung kostet 125 € für 60 Minuten Behandlung. Darin enthalten sind Anfahrt, komplettes Therapieequipment und ein individueller Behandlungsplan. Keine versteckten Kosten."}},
+      {"@type": "Question", "name": "Brauche ich ein Rezept für mobile Physiotherapie?", "acceptedAnswer": {"@type": "Answer", "text": "Bei akuten oder chronischen Erkrankungen sowie Verletzungen ist in der Regel ein ärztliches Privatrezept erforderlich. Für präventive Maßnahmen ist kein Rezept notwendig."}},
+      {"@type": "Question", "name": "Wie schnell bekomme ich einen Termin?", "acceptedAnswer": {"@type": "Answer", "text": "Nach Ihrer Anfrage melden wir uns in der Regel innerhalb von 24 Stunden bei Ihnen zurück."}},
+      {"@type": "Question", "name": "In welchen Regionen sind Sie tätig?", "acceptedAnswer": {"@type": "Answer", "text": "Wir sind in Oberbayern tätig – darunter Garmisch-Partenkirchen, München, Murnau am Staffelsee, Starnberg, Tutzing und Weilheim."}},
+      {"@type": "Question", "name": "Übernimmt meine private Krankenversicherung die Kosten?", "acceptedAnswer": {"@type": "Answer", "text": "Viele private Krankenversicherungen erstatten physiotherapeutische Hausbesuche – je nach Tarif vollständig oder teilweise. Sie erhalten von uns eine ordentliche Rechnung zur Einreichung bei Ihrer PKV."}},
+      {"@type": "Question", "name": "Kommt immer der gleiche Therapeut zu mir?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, wir legen großen Wert auf Kontinuität. Sie werden in der Regel durchgehend vom selben Therapeuten betreut."}}
+    ]
+  }
+  </script>
+
+  <style>
+    /* ===== HAUSBESUCHE PAGE ===== */
+
+    /* Hero */
+    .hb-hero {
+      background: var(--bg-light);
+      padding: 120px 0 64px;
+      border-bottom: 1px solid rgba(5, 39, 35, 0.07);
+      text-align: center;
+    }
+
+    .hb-hero-label {
+      display: block;
+      background: #39BDA6;
+      color: #fff;
+      font-size: clamp(22px, 4vw, 48px);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 28px 0;
+      border-radius: 8px;
+      margin-bottom: 0;
+      width: 100%;
+    }
+
+    .hb-hero-sub {
+      max-width: 640px;
+      margin: 28px auto 32px;
+      font-size: 17px;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .hb-hero .btn {
+      font-size: 16px;
+    }
+
+    /* Trust Indicators */
+    .hb-trust {
+      background: var(--primary);
+      padding: 40px 0;
+    }
+
+    .hb-trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+
+    .hb-trust-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hb-trust-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(57, 189, 166, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+    }
+
+    .hb-trust-value {
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+    }
+
+    .hb-trust-label {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.4;
+    }
+
+    /* Was ist section */
+    .hb-wasist {
+      padding: 80px 0;
+      background: var(--white);
+    }
+
+    .hb-wasist-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .hb-wasist-text .section-label {
+      color: var(--accent);
+    }
+
+    .hb-wasist-text h2 {
+      font-size: clamp(24px, 3vw, 36px);
+      color: var(--primary);
+      margin: 12px 0 24px;
+      line-height: 1.25;
+    }
+
+    .hb-wasist-text p {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .hb-wasist-img img {
+      width: 100%;
+      max-width: 460px;
+      border-radius: 16px;
+      box-shadow: 0 16px 50px rgba(5, 39, 35, 0.12);
+      display: block;
+    }
+
+    /* Fur wen section */
+    .hb-fuerwen {
+      padding: 80px 0;
+      background: var(--bg-light);
+    }
+
+    .hb-fuerwen .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .hb-fuerwen .section-label {
+      color: var(--accent);
+    }
+
+    .hb-fuerwen h2 {
+      font-size: clamp(24px, 3vw, 36px);
+      color: var(--primary);
+      margin-top: 12px;
+      line-height: 1.25;
+    }
+
+    .hb-fuerwen-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .hb-fuerwen-card {
+      background: var(--white);
+      border: 1px solid rgba(5, 39, 35, 0.08);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .hb-fuerwen-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(5, 39, 35, 0.1);
+    }
+
+    .hb-fuerwen-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(57, 189, 166, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      color: var(--accent);
+    }
+
+    .hb-fuerwen-card h3 {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .hb-fuerwen-card p {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* Standorte/Cities section */
+    .hb-standorte {
+      padding: 80px 0;
+      background: #E8FFF4;
+    }
+
+    .hb-standorte .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .hb-standorte .section-label {
+      color: var(--accent);
+    }
+
+    .hb-standorte h2 {
+      font-size: clamp(24px, 3vw, 36px);
+      color: var(--primary);
+      margin-top: 12px;
+      line-height: 1.25;
+    }
+
+    .hb-standorte-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .hb-stadt-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--white);
+      border: 1px solid rgba(5, 39, 35, 0.08);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 16px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .hb-stadt-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(5, 39, 35, 0.12);
+      border-color: var(--accent);
+    }
+
+    .hb-stadt-card:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .hb-stadt-card:active {
+      transform: translateY(0);
+    }
+
+    .hb-stadt-card svg {
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .hb-cta-box {
+      background: var(--white);
+      border: 1px solid rgba(5, 39, 35, 0.08);
+      border-radius: var(--radius);
+      padding: 32px;
+      text-align: center;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .hb-cta-box h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .hb-cta-box p {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* FAQ section */
+    .hb-faq {
+      padding: 80px 0;
+      background: var(--white);
+    }
+
+    .hb-faq .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .hb-faq .section-label {
+      color: var(--accent);
+    }
+
+    .hb-faq h2 {
+      font-size: clamp(24px, 3vw, 36px);
+      color: var(--primary);
+      margin-top: 12px;
+      line-height: 1.25;
+    }
+
+    .hb-faq .faq-list {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    /* CTA final section */
+    .hb-cta-final {
+      background: var(--white);
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .hb-cta-final .container {
+      background: #98E5D4;
+      border-radius: 28px;
+      padding: 64px 40px;
+    }
+
+    .hb-cta-final .section-label {
+      color: var(--primary);
+    }
+
+    .hb-cta-final h2 {
+      font-size: clamp(26px, 3.5vw, 40px);
+      color: var(--primary);
+      margin: 12px 0 16px;
+      line-height: 1.25;
+    }
+
+    .hb-cta-final p {
+      font-size: 16px;
+      color: var(--text);
+      max-width: 520px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+    }
+
+    .hb-cta-final .btn {
+      font-size: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hb-trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+
+      .hb-wasist-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hb-wasist-img {
+        order: -1;
+        text-align: center;
+      }
+
+      .hb-fuerwen-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hb-standorte-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hb-cta-final .container {
+        padding: 40px 20px;
+        border-radius: 20px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hb-trust-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="14" r="14" fill="#39BDA6" />
+            <path d="M8 14h12M14 8v12" stroke="#fff" stroke-width="2.5" stroke-linecap="round" />
+          </svg>
+        </span>
+        <span class="logo-text">Mobilis<strong>Physio</strong></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html#services">Leistungen</a>
+        <a href="index.html#how-it-works">So funktioniert's</a>
+        <a href="index.html#team">Unser Team</a>
+        <a href="hausbesuche.html" class="nav-active">Hausbesuche</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <a href="kontakt.html" class="btn btn-primary nav-cta">Termin buchen</a>
+      <button class="nav-toggle" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hb-hero">
+    <div class="container">
+      <div class="hb-hero-label">Mobile Physiotherapie – Hausbesuche in Oberbayern</div>
+      <p class="hb-hero-sub">Professionelle Physiotherapie direkt bei Ihnen zu Hause. Unsere staatlich anerkannten Therapeuten kommen zu Ihnen — 60 Minuten, 125 €, alles inklusive.</p>
+      <a href="kontakt.html" class="btn btn-primary">Termin anfragen</a>
+    </div>
+  </section>
+
+  <!-- ===== TRUST INDICATORS ===== -->
+  <section class="hb-trust">
+    <div class="container">
+      <div class="hb-trust-grid">
+        <div class="hb-trust-item">
+          <div class="hb-trust-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="hb-trust-value">60 Min.</div>
+          <div class="hb-trust-label">pro Sitzung</div>
+        </div>
+        <div class="hb-trust-item">
+          <div class="hb-trust-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="hb-trust-value">125 €</div>
+          <div class="hb-trust-label">all-inclusive</div>
+        </div>
+        <div class="hb-trust-item">
+          <div class="hb-trust-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M9 11l3 3L22 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="hb-trust-value">Staatlich</div>
+          <div class="hb-trust-label">anerkannte Therapeuten</div>
+        </div>
+        <div class="hb-trust-item">
+          <div class="hb-trust-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 012 2.18 2 2 0 014 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z" stroke="currentColor" stroke-width="1.8"/>
+            </svg>
+          </div>
+          <div class="hb-trust-value">24 h</div>
+          <div class="hb-trust-label">Rückmeldung</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WAS IST MOBILE PHYSIOTHERAPIE ===== -->
+  <section class="hb-wasist">
+    <div class="container">
+      <div class="hb-wasist-grid">
+        <div class="hb-wasist-text">
+          <p class="section-label">Unser Service</p>
+          <h2>Was ist mobile Physiotherapie?</h2>
+          <p>Bei der Physiotherapie im Hausbesuch kommt ein qualifizierter Physiotherapeut direkt zu Ihnen nach Hause — anstatt dass Sie eine Praxis aufsuchen müssen. Sie erhalten die gleiche hochwertige Behandlung wie in einer stationären Einrichtung, jedoch in der vertrauten und entspannten Atmosphäre Ihrer eigenen vier Wände.</p>
+          <p>Mobile Physiotherapie eignet sich besonders für Menschen, die aus gesundheitlichen, altersbedingten oder logistischen Gründen nicht selbst in eine Praxis fahren können oder wollen. Ob nach einer Operation, bei chronischen Erkrankungen oder einfach aus Bequemlichkeit — die Krankengymnastik zu Hause bietet Ihnen volle therapeutische Versorgung ohne Kompromisse.</p>
+          <p>Unsere Therapeuten bringen alle notwendigen Materialien und Hilfsmittel mit und passen die Behandlung an Ihre häuslichen Gegebenheiten an. So wird Ihr Wohnzimmer, Schlafzimmer oder ein anderer geeigneter Raum zur privaten Behandlungsumgebung.</p>
+        </div>
+        <div class="hb-wasist-img">
+          <img src="assets/illustrations/Hausbesuche-Physiotherapie.webp" alt="Physiotherapeut beim Hausbesuch – mobile Physiotherapie in Oberbayern" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FUR WEN ===== -->
+  <section class="hb-fuerwen">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Zielgruppe</p>
+        <h2>Für wen eignet sich mobile Physiotherapie?</h2>
+      </div>
+      <div class="hb-fuerwen-grid">
+        <div class="hb-fuerwen-card">
+          <div class="hb-fuerwen-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.8"/>
+            </svg>
+          </div>
+          <h3>Senioren mit eingeschränkter Mobilität</h3>
+          <p>Wenn der Weg zur Praxis zu beschwerlich oder riskant ist, bringen wir die Therapie direkt zu Ihnen nach Hause.</p>
+        </div>
+        <div class="hb-fuerwen-card">
+          <div class="hb-fuerwen-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Patienten nach Operationen</h3>
+          <p>Nach Gelenkersatz, Wirbelsäulen-OP oder anderen Eingriffen ist die Rehabilitation zu Hause die sicherste Lösung.</p>
+        </div>
+        <div class="hb-fuerwen-card">
+          <div class="hb-fuerwen-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Neurologische Erkrankungen</h3>
+          <p>Spezialisierte Krankengymnastik bei Schlaganfall, Multipler Sklerose, Parkinson oder anderen neurologischen Diagnosen.</p>
+        </div>
+        <div class="hb-fuerwen-card">
+          <div class="hb-fuerwen-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Pflegebedürftige &amp; Angehörige</h3>
+          <p>Wir entlasten pflegende Angehörige und bringen professionelle Bewegungstherapie direkt zum Pflegebedürftigen.</p>
+        </div>
+        <div class="hb-fuerwen-card">
+          <div class="hb-fuerwen-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Berufstätige mit wenig Zeit</h3>
+          <p>Kein Anfahrtsweg, keine Parkplatzsuche, keine Wartezeit. Physiotherapie, wenn es in Ihren Alltag passt.</p>
+        </div>
+        <div class="hb-fuerwen-card">
+          <div class="hb-fuerwen-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 22V12h6v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Komfort &amp; Diskretion</h3>
+          <p>Für Patienten, die ihre Wohnung nur schwer verlassen können oder eine diskrete, stressfreie Behandlung bevorzugen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LEISTUNGEN ===== -->
+  <section class="services-section" id="leistungen">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Leistungen</p>
+        <h2>Unsere Physiotherapie-Leistungen<br>direkt bei Ihnen zu Hause</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-illustration">
+            <img src="assets/illustrations/rehabilitation-nach-operation.webp"
+              alt="Physiotherapeut begleitet Patientin bei der Rehabilitation nach einer Operation" width="240"
+              height="240" loading="lazy">
+          </div>
+          <h3>Rehabilitation nach Operationen & Verletzungen</h3>
+          <p class="service-tags">Knie · Hüfte · Schulter · Wirbelsäule · Muskeln · Bänder · Sehnen</p>
+          <p>Strukturierte Therapie für eine sichere Rückkehr in Alltag und Aktivität.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-illustration">
+            <img src="assets/illustrations/Therapie bei Schmerzen.webp"
+              alt="Physiotherapeut behandelt Patienten auf einer Liege zur Schmerztherapie" width="240" height="240"
+              loading="lazy">
+          </div>
+          <h3>Therapie bei Schmerzen</h3>
+          <p class="service-tags">Rücken · Nacken · Gelenke</p>
+          <p>Individuelle Behandlung zur nachhaltigen Linderung von Schmerzen und Verbesserung Ihrer Beweglichkeit.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-illustration">
+            <img src="assets/illustrations/Eingeschränkte Mobilität.webp"
+              alt="Physiotherapeutin zeigt Übungen zur Verbesserung der Mobilität mit sitzendem Patienten" width="240"
+              height="240" loading="lazy">
+          </div>
+          <h3>Eingeschränkte Mobilität</h3>
+          <p class="service-tags">Alltag · Selbstständigkeit</p>
+          <p>Gezielte Förderung Ihrer Beweglichkeit für mehr Sicherheit und Unabhängigkeit im Alltag.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-illustration">
+            <img src="assets/illustrations/Neurologische Krankengym­nastik.webp"
+              alt="Physiotherapeut unterstützt Patient mit Gehrahmen bei neurologischer Krankengymnastik" width="240"
+              height="240" loading="lazy">
+          </div>
+          <h3>Neurologischen Beschwerden</h3>
+          <p class="service-tags">MS · Parkinson · Schlaganfall · ALS</p>
+          <p>Gezielte Therapie auf neurophysiologischer Basis (Bobath, PNF, Vojta) zur Verbesserung krankhafter
+            Bewegungsmuster – bei Erkrankungen des Gehirns und Rückenmarks direkt bei Ihnen zu Hause.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-illustration">
+            <img src="assets/illustrations/schwindel und gleichgewichtsstörungen.webp"
+              alt="Physiotherapeut hilft älterer Patientin bei Gleichgewichtsübungen zur Sturzprävention" width="240"
+              height="240" loading="lazy">
+          </div>
+          <h3>Schwindel & Gleichgewichtsstörungen</h3>
+          <p class="service-tags">Stabilität · Sicherheit · Sturzprävention</p>
+          <p>Gezielte Übungen zur Verbesserung von Gleichgewicht und Sicherheit.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-illustration">
+            <img src="assets/illustrations/Physiotherapie im Alter.webp"
+              alt="Physiotherapeut behandelt älteren Patienten zu Hause – Physiotherapie im Alter" width="240"
+              height="240" loading="lazy">
+          </div>
+          <h3>Physiotherapie im Alter</h3>
+          <p class="service-tags">Mobilität · Selbstständigkeit · Sicherheit</p>
+          <p>Individuelle Therapie zur Erhaltung von Beweglichkeit und Lebensqualität im Alltag.</p>
+        </div>
+      </div>
+      <div class="services-methods">
+        <div class="services-methods-text">
+          <h4>Unsere physiotherapeutischen Methoden</h4>
+          <p>Je nach Beschwerdebild kommen verschiedene Methoden zum Einsatz:</p>
+        </div>
+        <ul>
+          <li>Krankengymnastik (KG)</li>
+          <li>Manuelle Therapie (MT)</li>
+          <li>Lymphdrainage (MLD)</li>
+          <li>Atemtherapie</li>
+          <li>Personal Training</li>
+          <li>Massagetherapie</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STANDORTE / CITIES ===== -->
+  <section class="hb-standorte">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Einsatzgebiet</p>
+        <h2>Wo wir in Oberbayern aktiv sind</h2>
+      </div>
+      <div class="hb-standorte-grid">
+        <a href="hausbesuche.html" class="hb-stadt-card">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/>
+          </svg>
+          Garmisch-Partenkirchen
+        </a>
+        <a href="hausbesuche.html" class="hb-stadt-card">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/>
+          </svg>
+          München
+        </a>
+        <a href="physiotherapie-hausbesuch-murnau-am-staffelsee.html" class="hb-stadt-card">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/>
+          </svg>
+          Murnau am Staffelsee
+        </a>
+        <a href="hausbesuche.html" class="hb-stadt-card">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/>
+          </svg>
+          Starnberg
+        </a>
+        <a href="hausbesuche.html" class="hb-stadt-card">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/>
+          </svg>
+          Tutzing
+        </a>
+        <a href="hausbesuche.html" class="hb-stadt-card">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8"/>
+          </svg>
+          Weilheim
+        </a>
+      </div>
+      <div class="hb-cta-box">
+        <h3>Ihre Stadt nicht dabei?</h3>
+        <p>Kontaktieren Sie uns — wir prüfen, ob wir in Ihrer Region tätig werden können.</p>
+        <a href="kontakt.html" class="btn btn-primary">Jetzt anfragen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="hb-faq">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">FAQ</p>
+        <h2>Häufig gestellte Fragen zur mobilen Physiotherapie</h2>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Was kostet Physiotherapie als Hausbesuch?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Eine Sitzung kostet 125 € für 60 Minuten Behandlung. Darin enthalten sind Anfahrt, komplettes Therapieequipment und ein individueller Behandlungsplan. Keine versteckten Kosten. Privatpatienten können die Rechnung direkt bei Ihrer Versicherung einreichen.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Brauche ich ein Rezept für mobile Physiotherapie?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Das hängt vom Behandlungsgrund ab. Bei akuten oder chronischen Erkrankungen sowie Verletzungen ist in der Regel ein ärztliches Privatrezept erforderlich. Für präventive Maßnahmen wie Bewegungstraining ist kein Rezept notwendig.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Wie schnell bekomme ich einen Termin?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Nach Ihrer Anfrage melden wir uns in der Regel innerhalb von 24 Stunden bei Ihnen zurück und vereinbaren einen passenden Termin.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Übernimmt meine private Krankenversicherung die Kosten?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Viele private Krankenversicherungen erstatten physiotherapeutische Hausbesuche — je nach Tarif vollständig oder teilweise. Sie erhalten von uns eine ordentliche Rechnung zur Einreichung bei Ihrer PKV. Wir empfehlen, die Erstattungsmodalitäten vorab mit Ihrer Versicherung zu klären.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Kommt immer der gleiche Therapeut zu mir?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Ja, wir legen großen Wert auf Kontinuität. Sie werden in der Regel durchgehend vom selben Therapeuten betreut. So entsteht ein Vertrauensverhältnis, das den Therapieerfolg steigert.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            In welchen Regionen sind Sie tätig?
+            <span class="faq-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Wir sind in Oberbayern für Sie unterwegs — darunter Garmisch-Partenkirchen, München, Murnau am Staffelsee, Starnberg, Tutzing und Weilheim. Kontaktieren Sie uns mit Ihrer Postleitzahl — wir prüfen gerne die Verfügbarkeit.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="hb-cta-final">
+    <div class="container">
+      <p class="section-label">Jetzt starten</p>
+      <h2>Bereit für Physiotherapie<br>bei Ihnen zu Hause?</h2>
+      <p>Kontaktieren Sie uns — wir finden den passenden Therapeuten für Sie und melden uns innerhalb von 24 Stunden.</p>
+      <a href="kontakt.html" class="btn btn-primary">Termin vereinbaren</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <circle cx="14" cy="14" r="14" fill="#39BDA6" />
+              <path d="M8 14h12M14 8v12" stroke="#fff" stroke-width="2.5" stroke-linecap="round" />
+            </svg>
+          </span>
+          <span class="logo-text">Mobilis<strong>Physio</strong></span>
+        </a>
+        <p>Premium mobile Physiotherapie direkt zu Ihnen nach Hause — für Privatpatienten und Selbstzahler in Oberbayern.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8" />
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.8" />
+              <path d="M8 11v5M8 8v.5M12 16v-5M12 11c0-1.5 1-2 2-2s2 .5 2 2v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html#services">Leistungen</a></li>
+          <li><a href="index.html#how-it-works">So funktioniert's</a></li>
+          <li><a href="index.html#team">Unser Team</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav">
+        <h4>Hausbesuche</h4>
+        <ul>
+          <li><a href="physiotherapie-hausbesuch-murnau-am-staffelsee.html">Murnau am Staffelsee</a></li>
+          <li><a href="hausbesuche.html">Garmisch-Partenkirchen</a></li>
+          <li><a href="hausbesuche.html">München</a></li>
+          <li><a href="hausbesuche.html">Starnberg</a></li>
+          <li><a href="hausbesuche.html">Weilheim</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Kontakt</h4>
+        <ul>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 012 2.18 2 2 0 014 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z" stroke="currentColor" stroke-width="1.8" />
+            </svg>
+            <a href="tel:+4930123456789">+49 30 123 456 789</a>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.8" />
+              <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="1.8" />
+            </svg>
+            <a href="mailto:info@mobilis-physio.de">info@mobilis-physio.de</a>
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="1.8" />
+              <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.8" />
+            </svg>
+            <span>Oberbayern — München, Murnau,<br>Starnberg und weitere Städte</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 Mobilis Physio. Alle Rechte vorbehalten.</p>
+        <div class="footer-legal">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+          <a href="#">AGB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Sticky navbar
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 30);
+    });
+
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navCta = document.querySelector('.nav-cta');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navCta.classList.toggle('open');
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+        if (!expanded) btn.setAttribute('aria-expanded', 'true');
+      });
+    });
+  </script>
+
+</body>
+</html>
