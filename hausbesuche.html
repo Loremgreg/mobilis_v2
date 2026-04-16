@@ -64,17 +64,21 @@
     }
 
     .hb-hero-label {
-      display: block;
-      background: #39BDA6;
-      color: #fff;
-      font-size: clamp(22px, 4vw, 48px);
-      font-weight: 700;
-      letter-spacing: 0.06em;
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 28px 0;
-      border-radius: 8px;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .hb-hero h1 {
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.15;
       margin-bottom: 0;
-      width: 100%;
     }
 
     .hb-hero-sub {
@@ -552,7 +556,8 @@
   <!-- ===== HERO ===== -->
   <section class="hb-hero">
     <div class="container">
-      <div class="hb-hero-label">Mobile Physiotherapie – Hausbesuche in Oberbayern</div>
+      <p class="hb-hero-label">Mobile Physiotherapie</p>
+      <h1>Hausbesuche in Oberbayern</h1>
       <p class="hb-hero-sub">Professionelle Physiotherapie direkt bei Ihnen zu Hause. Unsere staatlich anerkannten
         Therapeuten kommen zu Ihnen — 60 Minuten, 125 €, alles inklusive.</p>
       <a href="kontakt.html" class="btn btn-primary">Termin anfragen</a>
