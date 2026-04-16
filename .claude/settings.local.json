@@ -6,7 +6,10 @@
       "Bash(curl:*)",
       "WebFetch(domain:www.physiostich.de)",
       "Bash(pkill -f \"serve . -l 300\")",
-      "Bash(npx puppeteer *)"
+      "Bash(npx puppeteer *)",
+      "Bash(npx sharp-cli *)",
+      "Bash(cp /Users/gregorybastin/Desktop/mobilis_v2/assets/img_hausbesuch/physiotherapeut-behandlung-hausbesuch-original.webp /Users/gregorybastin/Desktop/mobilis_v2/assets/img_hausbesuch/physiotherapeut-behandlung-hausbesuch.webp)",
+      "Bash(rm /Users/gregorybastin/Desktop/mobilis_v2/assets/img_hausbesuch/physiotherapeut-behandlung-hausbesuch-original.webp)"
     ]
   }
 }
